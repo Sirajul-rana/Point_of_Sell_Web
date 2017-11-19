@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h2></h2>
+</div>
+
+<input type="button" id="save" value="Save" class="success"/>
+<script>
+    $(document).ready(function() {
+        $("#save").click(function() {
+            var employess = [];
+
+            var employee = {
+                Name: "rana",
+                Number: "123456"
+            }
+            var employee2 = {
+                Name: "rana2",
+                Number: "456789"
+            }
+
+            employess.push(employee);
+            employess.push(employee2);
+
+            var newEmployees = JSON.stringify(employess);
+            alert(newEmployees);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Index","Home")',
+                dataType: "Json",
+                contentType: "application/json",
+                data: newEmployees,
+                success: function(response) {
+                    alert("hi "+response.msg);
+                    window.location.href = '@Url.Action("Index", "Home")';
+                },
+                error: function(status) {
+                    alert("wrong");
+                }
+            });
+        });
+    })
+</script>

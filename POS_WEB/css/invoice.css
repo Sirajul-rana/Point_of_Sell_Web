@@ -1,0 +1,105 @@
+﻿#invoice_title {
+    color: #DF4F40
+}
+
+#top_div {
+    border: 2px solid #E3E3E3;
+    height: 79%;
+    width: 100%;
+}
+
+#first_row {
+    border-bottom: 2px solid #E3E3E3;
+    background-color: #ECECEC;
+    height: 30px;
+}
+
+#first_icon {
+    border-right: 1px solid #E3E3E3; 
+    float: left; 
+    width: 30px; 
+    height: 30px;
+    text-align: center;
+}
+
+#fa_icon {
+    position: relative; 
+    top: calc(50% - 10px);
+}
+
+#invoice_creation {
+    position: relative; 
+    top: calc(50% - 10px);
+}
+
+#invoice_creation>p {
+    padding-left: 35px;
+}
+
+#first_col {
+    border-right: 2px solid #E3E3E3; 
+    float: left; 
+    margin-top: 10px;
+    height: 408px;
+}
+
+#invoice_table {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+#invoice_table>thead {
+    background-color: lightgray; 
+    font-weight: bold;
+}
+
+#secend_col {
+    border: 1px solid #E3E3E3; 
+    float: left; 
+    margin-top: 10px; 
+    margin-left: 8px; 
+    height: 408px; 
+    padding-left: 0px; 
+    padding-right: 0px;
+    margin-left: 40px;
+}
+#cus_place::-webkit-input-placeholder {
+   font-size: 10px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 8% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

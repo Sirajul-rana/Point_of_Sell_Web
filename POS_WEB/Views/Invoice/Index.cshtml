@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 id="invoice_title" ><i class="fa fa-fw fa-shopping-cart"></i>Invoice </h1>
+
+<div id="top_div">
+    <div id="first_row">
+        <div id="first_icon"><i id="fa_icon" class="fa fa-list"></i>
+        </div>
+        <div id="invoice_creation">
+            <p> Invoice Creation</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="first_col" class="col-md-8 ">
+            <table id="invoice_table">
+                <thead class="thead-inverse">
+                <tr>
+                    <td>S/No</td>
+                    <td>Barcode</td>
+                    <td>Product</td>
+                    <td>Unit Cost</td>
+                    <td>Quantiy</td>
+                    <td>Discount&#37;</td>
+                    <td>Total(Tk)</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="1111"/></td>
+                    <td><input type="text" value="Xiaomi redmi note 3" style="border-radius: 3px"/></td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="13000"/></td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="1"/></td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="0"/>&#37;</td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="13000"/>(Tk)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="1112"/></td>
+                    <td><input type="text" style="border-radius: 3px" value="Xiaomi redmi note 4"/></td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="140000"/></td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="1"/></td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="0"/>&#37;</td>
+                    <td><input type="text" style="width: 50px; border-radius: 3px" value="14000"/>(Tk)</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><i class="fa fa-fw fa-plus-square" id="addBtn" style="color: green"></i></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="secend_col" class="col-md-3">
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Sale Level</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px">
+                    <select class="form-control" id="exampleSelect" style="width: 160px">
+                        <option>Retailer</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Customer</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px">
+                    <input id="cus_place" class="form-control" style="width: 160px" type="text" placeholder="Type cust.ID/name/contactNo"/>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Total</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px"><input class="form-control" style="width: 160px" type="text" placeholder="00.00tk"/>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Pay Type</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px">
+                    <select class="form-control" id="exampleSelect1" style="width: 160px">
+                        <option>Cash</option>
+                        <option>Card</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Discount</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px"><input class="form-control" style="width: 160px" type="text" placeholder="0"/>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Vat&#37;</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px"><input class="form-control" style="width: 160px" type="text" placeholder="0%"/>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Grand Total</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px"><input class="form-control" style="width: 160px" type="text" placeholder="00.00tk"/>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Paid</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px"><input class="form-control" style="width: 160px" type="text" placeholder="00.00tk"/>
+                </div>
+            </div>
+            <div class="form-group" style="border-bottom: 1px solid #E3E3E3;">
+                <div style="float: left; width: 25%; border-right: 1px solid #E3E3E3"><label>Balance</label>
+                </div>
+                <div style="width: 100%; margin-left: 100px"><input class="form-control" style="width: 160px" type="text" placeholder="00.00tk"/>
+                </div>
+            </div>
+            <div>
+                <input type="button" class="btn btn-success" title="Checkout" value="Checkout"/>
+                <input type="button" class="btn btn-primary" value="Reset"/>
+                <input type="button" class="btn btn-danger" value="Hold"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 style="color: #DF4F40">Add Product</h2>
+        </div>
+        <div class="modal-body">
+            <div>
+                <label>Barcode</label>
+                <input class="form-control" placeholder="Enter Barcode"/>    
+            </div>
+            <div>
+                <label>Quantity</label>
+                <input class="form-control" placeholder="Enter Quantity" />
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input type="button" class="btn btn-success" value="Add" />
+            <input type="button" id="cancel" class="btn btn-danger" value="Cancel" />
+        </div>
+    </div>
+
+</div>
+<script>
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("addBtn");
+    var cancel = document.getElementById("cancel");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    cancel.onclick = function () {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.addEventListener("keydown", keyDownTextField, false);
+
+    function keyDownTextField(e) {
+        var keyCode = e.keyCode;
+        if (keyCode === 45) {
+            modal.style.display = "block";
+        } else if (keyCode === 27) {
+            modal.style.display = "none";
+        }
+
+       
+    }
+</script>
